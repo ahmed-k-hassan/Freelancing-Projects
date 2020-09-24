@@ -8,14 +8,14 @@ public class CnnTest extends CnnBase{
 
     @Test
     public void TestInvalidEmail(){
-        CnnRegister.setEmail("ahmed");
-        CnnRegister.setPassword("12354");
+        CnnRegister.setEmail("write invalid email");
+        CnnRegister.setPassword("write password");
         assertTrue(CnnRegister.invalidResult().isDisplayed());
     }
     @Test
     public void TestValidEmail(){
-        CnnRegister.setEmail("ahmd@yah.c");
-        CnnRegister.setPassword("AHm1346.");
+        CnnRegister.setEmail("write valid email");
+        CnnRegister.setPassword("write valid password");
         CnnRegister.ClickRegisterButton();
         assertTrue(CnnRegister.validResult().isDisplayed());
 
@@ -24,7 +24,7 @@ public class CnnTest extends CnnBase{
     public void TestLogin(){
         CnnLogin.clickLoginLink();
         CnnLogin.setEmail("write your mail here");
-        CnnLogin.setPassword("wirte your password here");
+        CnnLogin.setPassword("write your password here");
         CnnLogin.clickLoginButton();
     }
 
